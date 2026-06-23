@@ -1,13 +1,13 @@
 
-# 🚀 Project 01 - Two-Tier Application Deployment on AWS
+#  Project 01 - Two-Tier Application Deployment on AWS
 
-## 📌 Project Overview
+##  Project Overview
 Deployed a production-style 2-tier web application on Amazon Web Services (AWS).
 The architecture separates the application layer from the database layer,
 following industry best practices for security and scalability.
 
 ## 🌐 Live Application
-http://:8080/api/3.123.36.221torials
+http://3.123.36.221:8080/api/torials
 
 ## 🏗️ Architecture
 Internet → EC2 (Node.js REST API) → RDS (MySQL Database)
@@ -25,7 +25,7 @@ Internet → EC2 (Node.js REST API) → RDS (MySQL Database)
 | Ubuntu 22.04 | Server operating system |
 | Node.js & Express | Backend REST API framework |
 
-## 📋 What I Did
+##  What I Did
 - Created a custom VPC with public and private subnets
 - Launched an EC2 instance in the public subnet
 - Deployed a Node.js REST API on the EC2 instance
@@ -33,7 +33,7 @@ Internet → EC2 (Node.js REST API) → RDS (MySQL Database)
 - Connected the application to the database securely
 - Configured security groups to restrict database access to EC2 only
 
-## ⚠️ Problems Encountered & Solutions
+##  Problems Encountered & Solutions
 
 **Problem 1: RDS subnet group failed**
 The DB subnet group required subnets in at least 2 availability zones.
