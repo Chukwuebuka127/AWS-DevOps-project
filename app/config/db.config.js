@@ -1,6 +1,6 @@
 module.exports = {
-  HOST: "localhost",
-  USER: "root",
-  PASSWORD: "123456",
-  DB: "testdb"
+  HOST: "my-portfolio-db.ctg6yggmyi5w.eu-central-1.rds.amazonaws.com",
+  USER: "Ebuka",
+  PASSWORD: "Emma090nuel",
+  DB: "appdb"
 };
