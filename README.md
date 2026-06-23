@@ -1,73 +1,55 @@
-# Node.js Rest APIs with Express & MySQL example
 
-For instruction, please visit:
-> [Build Node.js Rest APIs with Express & MySQL](https://www.bezkoder.com/node-js-rest-api-express-mysql/)
+# 🚀 Project 01 - Two-Tier Application Deployment on AWS
 
-Front-end that works well with this Back-end
-> [Axios Client](https://www.bezkoder.com/axios-request/)
+## 📌 Project Overview
+Deployed a production-style 2-tier web application on Amazon Web Services (AWS).
+The architecture separates the application layer from the database layer,
+following industry best practices for security and scalability.
 
-> [Angular 8](https://www.bezkoder.com/angular-crud-app/) / [Angular 10](https://www.bezkoder.com/angular-10-crud-app/) / [Angular 11](https://www.bezkoder.com/angular-11-crud-app/) / [Angular 12](https://www.bezkoder.com/angular-12-crud-app/) / [Angular 13](https://www.bezkoder.com/angular-13-crud-example/) / [Angular 14](https://www.bezkoder.com/angular-14-crud-example/) / [Angular 15](https://www.bezkoder.com/angular-15-crud-example/) / [Angular 16 Client](https://www.bezkoder.com/angular-16-crud-example/) / [Angular 17 Client](https://www.bezkoder.com/angular-17-crud-example/)
+## 🌐 Live Application
+http://:8080/api/3.123.36.221torials
 
-> [Vue 2 Client](https://www.bezkoder.com/vue-js-crud-app/) / [Vue 3 Client](https://www.bezkoder.com/vue-3-crud/) / [Vuetify Client](https://www.bezkoder.com/vuetify-data-table-example/)
+## 🏗️ Architecture
+Internet → EC2 (Node.js REST API) → RDS (MySQL Database)
 
-> [React Client](https://www.bezkoder.com/react-crud-web-api/) / [React Redux Client](https://www.bezkoder.com/react-redux-crud-example/)
+## 🛠️ Tools & Services Used
+| Tool | Purpose |
+|------|---------|
+| AWS EC2 | Hosts the Node.js application |
+| AWS RDS (MySQL) | Managed relational database |
+| AWS VPC | Isolated private network |
+| Security Groups | Firewall rules for EC2 and RDS |
+| Internet Gateway | Connects VPC to the internet |
+| Route Tables | Controls network traffic routing |
+| Git & GitHub | Version control |
+| Ubuntu 22.04 | Server operating system |
+| Node.js & Express | Backend REST API framework |
 
-More Practice
-> [Build Node.js Rest APIs with Express, Sequelize & MySQL](https://www.bezkoder.com/node-js-express-sequelize-mysql/)
+## 📋 What I Did
+- Created a custom VPC with public and private subnets
+- Launched an EC2 instance in the public subnet
+- Deployed a Node.js REST API on the EC2 instance
+- Provisioned a MySQL RDS instance in the private subnet
+- Connected the application to the database securely
+- Configured security groups to restrict database access to EC2 only
 
-> [Server side Pagination in Node.js with Sequelize and MySQL](https://www.bezkoder.com/node-js-sequelize-pagination-mysql/)
+## ⚠️ Problems Encountered & Solutions
 
-> [Node.js Express File Upload Rest API example](https://www.bezkoder.com/node-js-express-file-upload/)
+**Problem 1: RDS subnet group failed**
+The DB subnet group required subnets in at least 2 availability zones.
+*Solution:* Created an additional subnet in a second availability zone.
 
-> [Node.js Express File Upload with Google Cloud Storage example](https://www.bezkoder.com/google-cloud-storage-nodejs-upload-file/)
+**Problem 2: VPC DNS settings**
+RDS creation failed due to DNS resolution being disabled on the VPC.
+*Solution:* Enabled DNS resolution and DNS hostnames in VPC settings.
 
-> [Node.js: Upload CSV file data into Database with Express](https://www.bezkoder.com/node-js-upload-csv-file-database/)
+**Problem 3: GitHub authentication failed**
+Git push was rejected because GitHub no longer accepts passwords.
+*Solution:* Generated a Personal Access Token with repo permissions.
 
-> [Node.js: Upload Excel file data into Database with Express](https://www.bezkoder.com/node-js-upload-excel-file-database/)
-
-> [Deploying/Hosting Node.js app on Heroku with MySQL database](https://www.bezkoder.com/deploy-node-js-app-heroku-cleardb-mysql/)
-
-Security:
-> [Node.js Express: JWT example | Token Based Authentication & Authorization](https://www.bezkoder.com/node-js-jwt-authentication-mysql/)
-
-Associations:
-> [Sequelize Associations: One-to-Many Relationship example](https://www.bezkoder.com/sequelize-associate-one-to-many/)
-
-> [Sequelize Associations: Many-to-Many Relationship example](https://www.bezkoder.com/sequelize-associate-many-to-many/)
-
-Fullstack:
-> [Vue.js + Node.js + Express + MySQL example](https://www.bezkoder.com/vue-js-node-js-express-mysql-crud-example/)
-
-> [Vue.js + Node.js + Express + MongoDB example](https://www.bezkoder.com/vue-node-express-mongodb-mevn-crud/)
-
-> [Angular 8 + Node.js + Express + MySQL example](https://www.bezkoder.com/angular-node-express-mysql/)
-
-> [Angular 10 + Node.js + Express + MySQL example](https://www.bezkoder.com/angular-10-node-js-express-mysql/)
-
-> [Angular 11 + Node.js Express + MySQL example](https://www.bezkoder.com/angular-11-node-js-express-mysql/)
-
-> [Angular 12 + Node.js Express + MySQL example](https://www.bezkoder.com/angular-12-node-js-express-mysql/)
-
-> [Angular 13 + Node.js Express + MySQL example](https://www.bezkoder.com/angular-13-node-js-express-mysql/)
-
-> [Angular 14 + Node.js + Express + MySQL example](https://www.bezkoder.com/angular-14-node-js-express-mysql/)
-
-> [Angular 15 + Node.js + Express + MySQL example](https://www.bezkoder.com/angular-15-node-js-express-mysql/)
-
-> [Angular 16 + Node.js + Express + MySQL example](https://www.bezkoder.com/angular-16-node-js-express-mysql/)
-
-> [Angular 17 + Node.js + Express + MySQL example](https://www.bezkoder.com/angular-17-node-js-express-mysql/)
-
-> [React + Node.js + Express + MySQL example](https://www.bezkoder.com/react-node-express-mysql/)
-
-> [React + Redux + Node.js Express + MySQL](https://www.bezkoder.com/react-redux-mysql-crud/)
-
-## Project setup
-```
-npm install
-```
-
-### Run
-```
-node server.js
-```
+## 📚 What I Learned
+- How to design and implement AWS networking from scratch
+- The importance of separating public and private subnets for security
+- How to securely connect application and database tiers
+- Linux server administration and Node.js deployment
+- Git version control and GitHub repository management
