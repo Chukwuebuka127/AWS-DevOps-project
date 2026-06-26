@@ -25,7 +25,7 @@ It ensures:
 
 ## 🌐 Live Application
 
- http://my-portfolio-alb-xxxxxxxx.eu-central-1.elb.amazonaws.com/api/tutorials
+ http://my-portfolio-alb-562076276.eu-central-1.elb.amazonaws.com
 
 
 
