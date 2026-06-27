@@ -1,13 +1,6 @@
 🚀 Project 05 - Infrastructure as Code (IaC) with Terraform
 
-"Terraform" (https://img.shields.io/badge/Terraform-IaC-7B42BC)
-"AWS" (https://img.shields.io/badge/AWS-Cloud-orange)
-"Infrastructure" (https://img.shields.io/badge/Infrastructure-Automated-blue)
-"Status" (https://img.shields.io/badge/Project-Completed-success)
-
----
-
-📌 Overview
+ Overview
 
 This project recreates an AWS infrastructure entirely using Terraform, demonstrating the principles of Infrastructure as Code (IaC).
 
