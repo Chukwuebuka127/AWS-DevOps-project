@@ -52,6 +52,9 @@ EC2 Instance (Ubuntu t3.micro)
 File| Purpose
 "main.tf"| Defines all AWS infrastructure resources
 
+<img width="958" height="539" alt="Screenshot 2026-07-09 120953" src="https://github.com/user-attachments/assets/c48ccbb1-0374-431f-954a-068e2f2606ac" />
+<img width="959" height="539" alt="Screenshot 2026-07-09 121036" src="https://github.com/user-attachments/assets/5640df36-5ce1-4b46-97ff-99eb890adc4a" />
+
 ---
 
 ☁️ AWS Resources Provisioned
