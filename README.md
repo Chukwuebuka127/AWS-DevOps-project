@@ -1,6 +1,42 @@
 🚀 AWS DevOps Engineering Portfolio
 
 «“I built and broke real infrastructure on AWS so I could learn how production systems actually behave.”»
+```mermaid
+graph TB
+    subgraph Project01[Project 01 - Two-Tier Architecture]
+        Internet([🌐 Internet]) --> IGW[Internet Gateway]
+        IGW --> EC2[EC2 Instance\nNode.js App]
+        EC2 --> RDS[(RDS MySQL)]
+    end
+
+    subgraph Project02[Project 02 - Docker]
+        Docker[🐳 Docker Container\nnodejs-mysql-app]
+    end
+
+    subgraph Project03[Project 03 - CI/CD]
+        GitHub[GitHub Push] --> Actions[GitHub Actions]
+        Actions --> Deploy[Auto Deploy to EC2]
+    end
+
+    subgraph Project04[Project 04 - Load Balancer]
+        ALB[Application Load Balancer] --> ASG[Auto Scaling Group\nMin 1 - Max 3]
+    end
+
+    subgraph Project05[Project 05 - Terraform]
+        TF[main.tf] -->|terraform apply| Infra[VPC + EC2 + SG]
+    end
+
+    subgraph Project06[Project 06 - Monitoring]
+        NE[Node Exporter] --> Prometheus
+        Prometheus --> Grafana[📊 Grafana Dashboard]
+    end
+
+    Project01 --> Project02
+    Project02 --> Project03
+    Project03 --> Project04
+    Project04 --> Project05
+    Project05 --> Project06
+```
 
 This repository documents a hands-on DevOps engineering journey built on AWS. Every project here represents real infrastructure I designed, deployed, and debugged — not just tutorial walkthroughs.
 
