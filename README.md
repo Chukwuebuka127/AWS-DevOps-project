@@ -23,6 +23,16 @@ terraform destroy
 ---
 
 🏗️ Architecture
+```mermaid
+graph TB
+    TF[Terraform main.tf] -->|terraform apply| AWS[AWS Resources]
+    AWS --> VPC[VPC]
+    AWS --> Subnet[Public Subnet]
+    AWS --> IGW[Internet Gateway]
+    AWS --> RT[Route Table]
+    AWS --> SG[Security Group]
+    AWS --> EC2[EC2 Instance\nt3.micro]
+```
 
 terraform apply
         │
