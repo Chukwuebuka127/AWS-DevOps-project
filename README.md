@@ -121,6 +121,8 @@ docker run
       │
       ▼
 Deployment Complete ✅
+<img width="953" height="538" alt="Screenshot 2026-07-09 115036" src="https://github.com/user-attachments/assets/733b1a4a-e6bd-4b4f-a06b-674ac690efeb" />
+
 
 
 ⚠️ Challenges Encountered
