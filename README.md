@@ -21,6 +21,8 @@ Docker is a containerization platform that packages an application together with
 2. Build Docker Image
 3. Run Docker Container
 4. Application Available on Port 8080
+5. <img width="959" height="536" alt="Screenshot 2026-07-09 120145" src="https://github.com/user-attachments/assets/75e55b8f-a034-40d4-8ee3-b74f6d7b3746" />
+
 
 ## 🛠️ Commands Used
 | Command | Purpose |
