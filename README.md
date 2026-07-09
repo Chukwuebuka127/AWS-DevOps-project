@@ -9,6 +9,13 @@ The monitoring stack continuously collects infrastructure metrics from the EC2 s
 ---
 
 Architecture
+```mermaid
+graph LR
+    EC2[EC2 Server] --> NE[Node Exporter\nPort 9100]
+    NE -->|scrapes every 15s| Prom[Prometheus\nPort 9091]
+    Prom -->|data source| Grafana[Grafana\nPort 3000]
+    Grafana --> Dashboard[📊 Dashboard\nCPU, RAM, Disk\nNetwork, Uptime]
+```
 
                 AWS EC2 Instance
                        │
