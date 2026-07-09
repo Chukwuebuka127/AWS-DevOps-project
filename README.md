@@ -9,6 +9,16 @@ The goal was to eliminate manual deployments by creating a CI/CD pipeline that a
 This project simulates a real-world DevOps workflow where code changes are continuously integrated and deployed with minimal human intervention.
 
 🏗️ Architecture
+```mermaid
+graph LR
+    Dev[👨‍💻 Developer] -->|git push| GitHub[GitHub Repository]
+    GitHub -->|triggers| Actions[GitHub Actions]
+    Actions --> Test[Run Tests]
+    Test --> Build[Build Docker Image]
+    Build --> Deploy[SSH into EC2]
+    Deploy --> Restart[Restart Container]
+    Restart --> Live[🚀 Live App]
+```
 
 Developer
     │
