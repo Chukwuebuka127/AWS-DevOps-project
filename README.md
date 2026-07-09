@@ -45,6 +45,10 @@ AWS RDS (MySQL Database - Private Subnet)
 | Node.js & Express | Backend REST API |
 | Ubuntu 22.04 | Server OS |
 | Git & GitHub | Version control |
+<img width="956" height="532" alt="Screenshot 2026-07-09 114156" src="https://github.com/user-attachments/assets/9c01d9e6-ef45-4d04-aee9-e0d4cc3bfa02" />
+<img width="958" height="536" alt="Screenshot 2026-07-09 114249" src="https://github.com/user-attachments/assets/b728d9fa-a1cc-454d-9772-9d9a47df983d" />
+<img width="952" height="536" alt="Screenshot 2026-07-09 114343" src="https://github.com/user-attachments/assets/8a82d6c1-3c9b-4baf-a2ef-5aad5b6cae1e" />
+<img width="956" height="537" alt="Screenshot 2026-07-09 114422" src="https://github.com/user-attachments/assets/04122c0e-60e2-43b4-9c29-773469da313f" />
 
 ---
 
