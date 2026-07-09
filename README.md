@@ -17,6 +17,23 @@ http://3.123.36.221:8080/api/tutorials
 ---
 
 ## 🏗️ Architecture
+```mermaid
+graph TB
+    Internet([🌐 Internet]) --> IGW[Internet Gateway]
+    IGW --> PublicSubnet[Public Subnet 10.0.1.0/24]
+    PublicSubnet --> EC2[EC2 Instance\nNode.js App\nPort 8080]
+    EC2 --> PrivateSubnet[Private Subnet 10.0.2.0/24]
+    PrivateSubnet --> RDS[(RDS MySQL\nmy-portfolio-db)]
+    
+    subgraph VPC[my-portfolio-vpc 10.0.0.0/16]
+        subgraph Public[Public Subnet]
+            EC2
+        end
+        subgraph Private[Private Subnet]
+            RDS
+        end
+    end
+```
 
 Internet
    ↓
