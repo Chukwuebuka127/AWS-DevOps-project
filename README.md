@@ -35,7 +35,6 @@ Docker is a containerization platform that packages an application together with
 | `docker images` | List locally available images |
 
 ## ⚠️ Problems Encountered & Solutions
-
 **Problem 1: MySQL 8 Authentication Error**
 The application failed to connect to MySQL because MySQL 8 uses caching_sha2_password by default.
 
@@ -63,3 +62,5 @@ Deploy containers using Kubernetes for orchestration and scalability
 
 Project Summary
 This project demonstrates practical experience with containerization using Docker. By packaging the application into a container, the deployment process becomes portable, repeatable, and independent of the underlying host environment — a key principle in modern DevOps practices.
+
+
