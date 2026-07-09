@@ -142,13 +142,10 @@ Prometheus, Node Exporter, and Grafana were configured as systemd services, ensu
 
 Screenshots
 
-Include screenshots demonstrating:
-
-- Prometheus Targets
-- Prometheus Query Interface
-- Grafana Dashboard
-- Node Exporter Metrics
-- EC2 Instance Monitoring
+<img width="958" height="535" alt="Screenshot 2026-07-09 082621" src="https://github.com/user-attachments/assets/adaf6ed2-ed3f-4167-be0c-51c94d0c11c2" />
+<img width="950" height="514" alt="Screenshot 2026-07-09 092529" src="https://github.com/user-attachments/assets/d2ff4ebd-7922-498b-bcd6-771644345552" />
+<img width="953" height="530" alt="Screenshot 2026-07-09 083207" src="https://github.com/user-attachments/assets/8aa8e874-484d-4f8b-b5ee-1f12f7d523b4" />
+<img width="953" height="499" alt="Screenshot 2026-07-09 093235" src="https://github.com/user-attachments/assets/d5796c3a-39ed-4ac2-a89f-828e91d75c01" />
 
 ---
 
