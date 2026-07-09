@@ -42,6 +42,7 @@ Each branch represents a stage in system maturity.
 | 06 | 06-kubernetes | Container orchestration at scale | Pods, deployments, service discovery |
 | 07 | 07-monitoring | Observability layer | Metrics, logs, alerting, dashboards |
 
+<img width="959" height="513" alt="Screenshot 2026-07-09 123036" src="https://github.com/user-attachments/assets/ebbe04c7-78b6-4934-8e1d-eb51ed7d937c" />
 
 ---
 
