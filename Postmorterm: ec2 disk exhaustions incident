@@ -1,0 +1,105 @@
+# Postmortem: EC2 Disk Exhaustion Incident
+**Date:** July 2026  
+**Severity:** P1 — Critical  
+**Duration:** ~2 hours  
+**Author:** Chukwuebuka Emmanuel Orjide  
+
+---
+
+## Summary
+EC2 instance disk reached 100% capacity causing 
+k3s Kubernetes scheduler to stop scheduling pods 
+due to disk pressure taint. The root cause was 
+k3s downloading container images without sufficient 
+disk space available.
+
+---
+
+## Timeline
+
+| Time | Event |
+|------|-------|
+| T+0 | Disk usage noticed at 100% on login |
+| T+10 | kubectl get pods showing pending status |
+| T+15 | kubectl describe pod revealed disk-pressure taint |
+| T+20 | Identified k3s images consuming 493MB in /var/lib/rancher |
+| T+30 | Removed terraform .terraform directory (675MB freed) |
+| T+45 | Expanded EBS volume from 8GB to 20GB via AWS Console |
+| T+90 | Filesystem expanded with growpart and resize2fs |
+| T+120 | Disk at 37% — normal operations resumed |
+
+---
+
+## Root Cause
+
+Two contributing factors:
+1. Terraform provider cache (.terraform directory) 
+   consuming 675MB unnecessarily
+2. k3s container runtime downloading system images 
+   (493MB) without pre-checking available disk space
+
+The EC2 instance had only 8GB storage which was 
+insufficient for running multiple services simultaneously:
+- Jenkins (96MB)
+- Docker images
+- k3s images
+- Terraform cache
+- Application code
+
+---
+
+## Impact
+
+- Kubernetes pods unable to schedule for ~2 hours
+- Node.js application deployment blocked
+- Development workflow interrupted
+
+---
+
+## Resolution
+
+1. Removed .terraform cache directory (freed 675MB)
+2. Cleaned snap package cache
+3. Expanded EBS volume from 8GB to 20GB
+4. Extended filesystem using growpart and resize2fs
+5. Disk usage reduced from 100% to 37%
+
+---
+
+## What Went Wrong
+
+- No disk usage monitoring alerts configured
+- Insufficient initial disk size for planned workloads
+- No cleanup policy for Terraform provider cache
+
+---
+
+## Action Items
+
+| Action | Priority | Status |
+|--------|----------|--------|
+| Configure Grafana alert for disk > 80% | High | ✅ Done |
+| Document disk requirements before installing tools | High | ✅ Done |
+| Add .terraform to .gitignore | Medium | ✅ Done |
+| Expand EC2 storage proactively | High | ✅ Done |
+
+---
+
+## Lessons Learned
+
+1. Always monitor disk space before installing 
+   heavy tools like k3s
+2. Terraform provider cache should never be 
+   committed or left on production servers
+3. 8GB storage is insufficient for a full 
+   DevOps toolchain — minimum 20GB recommended
+4. Disk pressure monitoring should be configured 
+   before problems occur — not after
+
+---
+
+## Prevention
+
+- Grafana alert now configured for disk > 80% ✅
+- EC2 storage expanded to 20GB ✅
+- Regular disk cleanup procedures documented ✅
