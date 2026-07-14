@@ -128,15 +128,13 @@ The application was exposed through a NodePort Service, while Kubernetes automat
 ---
 
 ## Screenshots
+<img width="955" height="538" alt="Screenshot 2026-07-14 110459" src="https://github.com/user-attachments/assets/f7660f99-6d5c-4167-ae06-5ecc90feef03" />
 
-Include screenshots of:
+<img width="959" height="539" alt="Screenshot 2026-07-09 121036" src="https://github.com/user-attachments/assets/66afdb50-11ec-43bb-8bb9-d0eda13e6e56" />
+<img width="953" height="484" alt="Screenshot 2026-07-14 122840" src="https://github.com/user-attachments/assets/84ba702b-2cdc-4eec-b3e2-14066bbb5026" />
+<img width="817" height="458" alt="Screenshot 2026-07-14 123018" src="https://github.com/user-attachments/assets/75b2a11f-0071-473d-9701-958acc3b123f" />
+<img width="957" height="538" alt="Screenshot 2026-07-14 123421" src="https://github.com/user-attachments/assets/5a3d090f-971f-4997-bbd1-379355f49dda" />
 
-- Minikube Cluster
-- Running Pods
-- Deployments
-- Services
-- Kubernetes Dashboard
-- Application running in the browser
 
 ---
 
